@@ -112,7 +112,8 @@ echo "   (Type 'exit' or press Ctrl+D to exit the shell)"
 echo ""
 
 docker compose -f "${COMPOSE_FILE}" run --rm -it \
-    --entrypoint "/accelerated-computing-hub/brev/entrypoint.bash shell"
+    --entrypoint "/accelerated-computing-hub/brev/entrypoint.bash" \
+    "${SERVICE}" shell
 
 echo ""
 echo "================================================================================"
